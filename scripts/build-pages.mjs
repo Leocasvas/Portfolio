@@ -27,6 +27,7 @@ const staticLinks = new Map([
   ['href="../resume"', 'href="resume.html"'],
   ['href="../contact"', 'href="contact.html"'],
   ['href="/styles/', 'href="styles/'],
+  ['src="/scripts/', 'src="scripts/'],
 ]);
 
 function createStaticHtml(html) {

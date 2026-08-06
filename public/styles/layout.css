@@ -16,7 +16,7 @@ i {
   color: #fff;
 }
 .navbar-mainbg {
-  background-color: #3586ff;
+  background-color: #02976a;
   padding: 0px;
 }
 #navbarSupportedContent {
@@ -45,7 +45,7 @@ i {
   position: relative;
 }
 #navbarSupportedContent > ul > li.active > a {
-  color: #3586ff;
+  color: #02976a;
   background-color: transparent;
   transition: all 0.7s;
 }
@@ -99,7 +99,7 @@ i {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #3586ff;
+  background-color:#02976a;;
 }
 .hori-selector .right:before {
   bottom: 0;
@@ -169,7 +169,7 @@ footer {
   width: 100%;
   /* Reserve space for the waves, which extend 100px above the footer. */
   margin-top: 100px;
-  background: #3586ff;
+  background:#02976a;
   min-height: 100px;
   padding: 20px 50px;
   display: flex;
@@ -201,7 +201,12 @@ footer .social_icon li a {
 }
 footer .social_icon li a:hover {
   transform: translateY(-15px);
-  color: blue;
+  color: #02976a;
+}
+
+/* Align the inline X SVG with the Ionicons used by the other social links. */
+footer .social_icon li a svg {
+  vertical-align: 0.125em;
 }
 
 footer .menu li a {
@@ -236,8 +241,11 @@ footer .wave {
   left: 0;
   width: 100%;
   height: 100px;
-  background: url(https://i.ibb.co/rZt4Nhg/wave.png);
-  background-size: 1000px 100px;
+  background-color: #02976a;
+  -webkit-mask: url(https://i.ibb.co/rZt4Nhg/wave.png) repeat-x;
+  -webkit-mask-size: 1000px 100px;
+  mask: url(https://i.ibb.co/rZt4Nhg/wave.png) repeat-x;
+  mask-size: 1000px 100px;
 }
 
 footer .wave#wave1 {
@@ -269,18 +277,22 @@ footer .wave#wave4 {
 
 @keyframes animateWave {
   0% {
-    background-position-x: 1000px;
+    -webkit-mask-position: 1000px 0;
+    mask-position: 1000px 0;
   }
   100% {
-    background-position-x: 0px;
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
   }
 }
 
 @keyframes animateWave_02 {
   0% {
-    background-position-x: 0px;
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
   }
   100% {
-    background-position-x: 1000px;
+    -webkit-mask-position: 1000px 0;
+    mask-position: 1000px 0;
   }
 }
